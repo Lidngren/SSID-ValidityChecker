@@ -18,4 +18,8 @@ public abstract class ValidityCheck {
         }
         return res;
     }
+
+    protected String formatInput(String input) {
+        return input.replace("-", "").replace("+", "");
+    }
 }

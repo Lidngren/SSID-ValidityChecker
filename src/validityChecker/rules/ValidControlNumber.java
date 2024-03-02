@@ -9,7 +9,7 @@ public class ValidControlNumber extends ValidityCheck {
     }
 
     public boolean parse(String input) {
-        String temp = input.replace("-", "").replace("+", "");
+        String temp = formatInput(input);
         int[] digits = new int[temp.length()];
         int startIndex = temp.length() == 10 ? 0 : 2;
 

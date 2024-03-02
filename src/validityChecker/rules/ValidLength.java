@@ -9,7 +9,7 @@ public class ValidLength extends ValidityCheck {
     }
 
     public boolean parse(String input) {
-        String temp = input.replace("-", "").replace("+", "");
+        String temp = formatInput(input);
         return (temp.length() == 10 || temp.length() == 12);
     }
 
