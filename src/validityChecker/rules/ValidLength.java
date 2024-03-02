@@ -2,10 +2,10 @@ package src.validityChecker.rules;
 
 import src.validityChecker.ValidityCheck;
 
-public class CorrectLength extends ValidityCheck {
+public class ValidLength extends ValidityCheck {
 
-    public CorrectLength() {
-        super("Correct length");
+    public ValidLength() {
+        super("Valid length");
     }
 
     public boolean parse(String input) {

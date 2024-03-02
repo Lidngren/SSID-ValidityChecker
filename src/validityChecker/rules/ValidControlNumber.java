@@ -2,10 +2,10 @@ package src.validityChecker.rules;
 
 import src.validityChecker.ValidityCheck;
 
-public class CorrectControlNumber extends ValidityCheck {
+public class ValidControlNumber extends ValidityCheck {
 
-    public CorrectControlNumber() {
-        super("Correct control number");
+    public ValidControlNumber() {
+        super("Valid control number");
     }
 
     public boolean parse(String input) {
