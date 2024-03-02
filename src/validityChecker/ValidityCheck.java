@@ -22,4 +22,8 @@ public abstract class ValidityCheck {
     protected String formatInput(String input) {
         return input.replace("-", "").replace("+", "");
     }
+
+    protected int getIntAt(String input, int index) {
+        return Integer.parseInt(String.valueOf(input.charAt(index)));
+    }
 }

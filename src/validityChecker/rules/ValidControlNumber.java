@@ -14,7 +14,7 @@ public class ValidControlNumber extends ValidityCheck {
         int startIndex = temp.length() == 10 ? 0 : 2;
 
         for (int i = 0; i < temp.length(); i++) {
-            digits[i] = Integer.parseInt(String.valueOf(temp.charAt(i)));
+            digits[i] = getIntAt(temp, i);
         }
 
         int result = 0;
