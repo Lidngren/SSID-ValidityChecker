@@ -21,7 +21,7 @@ public class ValidControlNumber extends ValidityCheck {
         for (int i = startIndex; i < digits.length-1; i++) {
             int multiplier = i%2 == 0 ? 2 : 1;
             int sum = digits[i] * multiplier;
-            if (sum > 10) {
+            if (sum > 9) {
                 sum = 1 + (sum-10);
             }
             result += sum;
