@@ -1,12 +1,12 @@
 package src;
 
+import src.validityChecker.RuleLoaderAndParser;
+
 public class Main {
 
     public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println("Need filepath");
-        } else {
+        RuleLoaderAndParser loadAndParse = new RuleLoaderAndParser();
 
-        }
+        loadAndParse.parseRules(loadAndParse.loadRules(), "190910799824");
     }
 }
