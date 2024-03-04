@@ -29,11 +29,30 @@ public class RuleLoaderAndParser {
         }
 
         if(faults > 0) {
-            System.out.println("\n  Invalid SSID, refer to above log whats at fault.");
+            System.out.println("\n  Invalid, refer to above log whats at fault.");
             return false;
         }
 
-        System.out.println("\n  Valid SSID");
+        defineIDType(input);
         return true;
+    }
+
+    private void defineIDType(String input) {
+        String formatted = input.replace("-", "").replace("+","");
+        int startIndex = formatted.length() == 10 ? 0 : 2;
+        int month = Integer.parseInt(formatted.substring(startIndex+2,startIndex+4));
+        int day = Integer.parseInt(formatted.substring(startIndex+4,startIndex+6));
+
+        if(month > 19) {
+            System.out.println("\n  Valid organisation number");
+            return;
+        }
+
+        if(day > 60) {
+            System.out.println("\n  Valid Swedish co-ordination number");
+            return;
+        }
+
+        System.out.println("\n  Valid Swedish personal identity number");
     }
 }
