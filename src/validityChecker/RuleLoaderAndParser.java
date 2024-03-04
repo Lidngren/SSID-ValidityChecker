@@ -1,6 +1,5 @@
 package src.validityChecker;
 
-import src.validityChecker.ValidityCheck;
 import src.validityChecker.rules.*;
 
 import java.util.ArrayList;
