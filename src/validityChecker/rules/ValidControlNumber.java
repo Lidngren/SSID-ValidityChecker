@@ -17,6 +17,10 @@ public class ValidControlNumber extends ValidityCheck {
             digits[i] = getIntAt(temp, i);
         }
 
+        /*
+            Using Luhns-algorithm to validate the control digit at the end of the number.
+            For more info see: https://en.wikipedia.org/wiki/Luhn_algorithm
+         */
         int result = 0;
         for (int i = startIndex; i < digits.length-1; i++) {
             int multiplier = i%2 == 0 ? 2 : 1;
