@@ -18,10 +18,8 @@ public class ValidDate extends ValidityCheck {
         int startIndex = formatted.length() == 10 ? 0 : 2;
         String stripped = formatted.substring(startIndex, formatted.length()-4);
 
-        int month = 0;
-        int day = 0;
-        month += (getIntAt(formatted, startIndex+2)*10) + getIntAt(formatted, startIndex+3);
-        day += (getIntAt(formatted, startIndex+4)*10) + getIntAt(formatted, startIndex+5);
+        int month = Integer.parseInt(formatted.substring(startIndex+2,startIndex+4));
+        int day = Integer.parseInt(formatted.substring(startIndex+4,startIndex+6));
 
         //If the month is 20 or higher it's a Swedish organisation number.
         if (month > 19) {
