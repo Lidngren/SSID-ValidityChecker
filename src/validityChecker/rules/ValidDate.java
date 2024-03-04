@@ -39,7 +39,7 @@ public class ValidDate extends ValidityCheck {
             LocalDate.parse(stripped, DateTimeFormatter.ofPattern("uuMMdd").withResolverStyle(ResolverStyle.STRICT));
 
         } catch (DateTimeParseException e) {
-            //If the date have been increased by 60 it's a valid temporary Swedish SSID.
+            //If the date have been increased by 60 it's a valid co-ordination number.
             if(day < 61 || day > 91) {
                 return false;
             } else if(month > 12) {
